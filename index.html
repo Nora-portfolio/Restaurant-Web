@@ -3,202 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact VERVE</title>
+    <link rel="stylesheet" href="contact_style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    
     <header class="header">
         <a href="index.html" class="logo">VERVE</a>
-    
         <i class='bx bx-menu' id="menu-icon"></i>
-        
-        <!-- nav là một thẻ điều hướng  -->
         <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="Menu.html">Menu</a>
-            <a href="Contact.html">Contact</a>
-
+            <a href="Contact.html" class="active">Contact</a>
         </nav>
     </header>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Welcome, It's <span>VERVE</span></h1>
-            <h3 class="text-animation">This's a <span></span></h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis fuga perspiciatis mollitia quaerat reprehenderit nobis! Voluptas, repudiandae. Magni modi quibusdam distinctio quo porro voluptatibus a cupiditate corrupti adipisci. Itaque, est.</p>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>VERVE</span></h2>
 
-
-            <div class="social-icons">
-                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
-                <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+        <div class="address">
+            <div class="address-item">
+                <p>1000 Fort William Rd,</p>
+                <p>Thunder Bay, ON</p>
+                <p>P7B 6B9</p>
+                <p>807-123-456</p>
             </div>
 
-            <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact" class="btn">Contact</a>
-            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2648.755129629197!2d-89.24628292470933!3d48.40364547127404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d5921fa346f4f09%3A0xa6dbf180fdb12c24!2sIntercity%20Shopping%20Centre!5e0!3m2!1sen!2sca!4v1732412661707!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-            <div class="home-img">
-                <img src="resView.jpg" alt="">
-            </div>
-    </section>
 
-    <section class="history" id="history">
-        <h2 class="heading">History</h2>
-
-        <div class="timeline-items">
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                    <div class="timeline-date">1995</div>
-                    <div class="timeline-content">
-                        <h3>The Beginning of Verve</h3>
-                        <p>In 1995, Verve opened its doors in a quiet corner of San Francisco, founded by culinary visionary Clara Whitmore. Clara’s philosophy was simple yet bold: to craft dishes that celebrate seasonal ingredients, global influences, and artistic presentation. With just 12 tables, Verve quickly became a hidden gem, attracting food enthusiasts and critics alike. Its name, inspired by the energy and passion behind each creation, symbolized the spirit of innovation that defined its kitchen.</p>
-                    </div>
-                
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                    <div class="timeline-date">2002</div>
-                    <div class="timeline-content">
-                        <h3>A Michelin Star Shine</h3>
-                        <p>By the turn of the millennium, Verve had established itself as a beacon of fine dining. The dedication to excellence paid off when the restaurant received its first Michelin star in 2000. This recognition catapulted Verve into the global spotlight, attracting diners from around the world who came to experience Clara’s signature creations, such as her renowned saffron-infused lobster bisque and heirloom beet tartare.p>
-                    </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                    <div class="timeline-date">2006</div>
-                    <div class="timeline-content">
-                        <h3>Reaching Ten Locations</h3>
-                        <p>Building on its success, Verve expanded carefully and deliberately. By 2006, the brand had grown to 10 locations, each maintaining the same dedication to quality and ambiance that defined the flagship. From New York to Tokyo, Verve’s elegant dining rooms became synonymous with an unparalleled culinary experience. Clara’s leadership ensured that each location celebrated local ingredients while retaining the restaurant’s distinct identity</p>
-                    </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                    <div class="timeline-date">2016</div>
-                    <div class="timeline-content">
-                        <h3>A Million-Dollar Milestone</h3>
-                        <p>After two decades of growth and refinement, Verve reached a significant milestone in 2016: achieving an annual profit of $1 million. This success was attributed to its unwavering commitment to innovation, sustainability, and customer satisfaction. Verve had not only become a financial success but also a symbol of culinary artistry, with a legacy built on passion, excellence, and, of course, verve.</p>
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="services" id="services">
-        <h2 class="heading">Services</h2>
-
-        <div class="services-container">
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Private Space</h4>
-                    <p>
-                        Verve values intimacy and personalization. Each of our locations offers exclusive, private dining spaces for those seeking a secluded environment for special occasions, business meetings, or a quiet evening with loved ones. Our dedicated staff ensures a seamless and tailored experience, turning any gathering into a cherished memory.</p>
+        <form onsubmit={SubmitForm} method="POST">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <input type="number" name="phone_number" placeholder="Phone Number" required>
+                    <input type="text" name="subject" placeholder="Subject">
                 </div>
             </div>
-
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Fresh Ingredients</h4>
-                    <p>Freshness is the cornerstone of our culinary philosophy. We source seasonal ingredients from local farms and sustainable purveyors to guarantee vibrant flavors in every dish. Our chefs craft menus that celebrate these fresh elements, transforming them into works of art on the plate.</p>
-                </div>
+            <div class="input-group-2">
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <!-- <input type="submit" value="Send Message" class="btn"> -->
+                 <button>send</button>
             </div>
-
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Luxury</h4>
-                    <p>Every detail at Verve is designed to exude sophistication and comfort. From bespoke table settings to ambient lighting, we create an environment that matches the elegance of our cuisine. Our guests are treated to impeccable service, ensuring a flawless dining experience from start to finish.</p>
-                </div>
-            </div>
-
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Diversified</h4>
-                    <p>Verve’s menu is a celebration of global flavors and creativity. Our chefs draw inspiration from a wide range of culinary traditions, offering a diverse array of dishes that cater to different tastes and preferences. Whether it’s a signature French dish, a bold Asian fusion creation, or a refined vegetarian plate, there’s something to delight every palate.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="review" id="review">
-        <div class="review-box">
-            <h2 class="heading">REVIEW</h2>
-
-            <div class="wrapper">
-                <div class="review-item">
-                    <img src="https://i.pinimg.com/564x/5d/6f/d1/5d6fd1521ea4f125c701c3c423046bd3.jpg" alt="">
-                    <h2>Marilyn</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cum 
-                        repellendus nemo autem maiores delectus, earum tenetur doloribus? 
-                        Corporis odit distinctio dolorem blanditiis placeat iusto ea. Rem 
-                        necessitatibus eius earum.</p>
-                </div>
-
-                <div class="review-item">
-                    <img src="https://i.pinimg.com/474x/93/a6/8a/93a68a33c76eadf5af8b16b3604961c4.jpg" alt="">
-                    <h2>Julia</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cum 
-                        repellendus nemo autem maiores delectus, earum tenetur doloribus? 
-                        Corporis odit distinctio dolorem blanditiis placeat iusto ea. Rem 
-                        necessitatibus eius earum.</p>
-                </div>
-
-                <div class="review-item">
-                    <img src="https://i.pinimg.com/474x/91/a3/f5/91a3f5742d9a8d4ad69877f86183ec1f.jpg" alt="">
-                    <h2>Rebecca</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cum 
-                        repellendus nemo autem maiores delectus, earum tenetur doloribus? 
-                        Corporis odit distinctio dolorem blanditiis placeat iusto ea. Rem 
-                        necessitatibus eius earum.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </form>
 
     <footer class="footer">
         <div class="social">
-            <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
-            <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
         </div>
 
         <ul class="list">
-            <li>
-                <a href="index.html">Services</a>
-            </li>
-            <li>
-                <a href="index.html">About</a>
-            </li>
-            <li>
-                <a href="Contact.html">Contact</a>
-            </li>
-            <li>
-                <a href="index.html">Review</a>
-            </li>
+            <li><a href="index.html">Services</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="index.html">Review</a></li>
         </ul>
         <p class="copyright">
             © HongHa Nguyen | All Rights Reserved
@@ -206,5 +69,37 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+
+
+      const SubmitForm = (e)=>{
+        
+
+      }
+
+        const saveData = () => {
+
+        // Send data to the server
+        fetch('http://127.0.0.1:5000/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ amount, date, category }),
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => alert(data.message))
+            .catch(error => console.error('Error:', error));
+        };
+
+        // Attach event listener to the Add button
+        document.querySelector("submit").addEventListener("click", saveData);
+
+    </script>
+
 </body>
 </html>
